@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping  xmlns="urn:nhibernate-mapping-2.2" assembly="DataModel" namespace="DataModel.Entidades" 
+					>
+
+	<class name="Proveedor" table="PREPRO">
+		<id name="Id" column ="PREPROPID" type="int" unsaved-value="0">
+			<generator class="identity"/>
+			  </id>
+    <property name="Nombre" column="PREPRONOM" type="string" not-null="true"/>
+    </class>
+	
+</hibernate-mapping>

@@ -1,0 +1,38 @@
+<Configuration>
+  <SharedSolutionDisabledTemplatesManager>
+    <DisabledTemplates />
+  </SharedSolutionDisabledTemplatesManager>
+  <UnitTestRunner>
+    <CustomStartDirectory>
+    </CustomStartDirectory>
+    <UseShadowCopy>True</UseShadowCopy>
+    <UseCustomFolder>False</UseCustomFolder>
+    <Providers />
+  </UnitTestRunner>
+  <UserSolutionDisabledTemplatesManager>
+    <DisabledTemplates />
+  </UserSolutionDisabledTemplatesManager>
+  <FileStructureView>
+    <AutoScrollToSource>False</AutoScrollToSource>
+    <TrackCaretLocation>False</TrackCaretLocation>
+  </FileStructureView>
+  <ReFormatCode>
+    <ReorderMembers>False</ReorderMembers>
+    <OptimizeUsings>False</OptimizeUsings>
+    <RemoveRedundantThis>False</RemoveRedundantThis>
+    <ShortenReferences>False</ShortenReferences>
+  </ReFormatCode>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <EditorManager>
+    <RecentFiles>
+      <File id="7846AFA6-5CAD-4685-9B2D-88E2595555D9/d:actions/f:IAction.cs" caret="164" scrollPosition="0|0" />
+      <File id="7846AFA6-5CAD-4685-9B2D-88E2595555D9/d:actions/f:DefaultAction.cs" caret="1065" scrollPosition="0|0" />
+      <File id="7846AFA6-5CAD-4685-9B2D-88E2595555D9/d:actions/f:Actions.cs" caret="456" scrollPosition="0|0" />
+      <File id="D592DDF7-BFCE-43C0-A285-C43FCC66F0E9/f:app.config" caret="0" scrollPosition="0|0" />
+      <File id="D592DDF7-BFCE-43C0-A285-C43FCC66F0E9/f:hibernate.cfg.xml" caret="0" scrollPosition="0|0" />
+    </RecentFiles>
+  </EditorManager>
+  <CompletionStatisticsManager />
+</Configuration>

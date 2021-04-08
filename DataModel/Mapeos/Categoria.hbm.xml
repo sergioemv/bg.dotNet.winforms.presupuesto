@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping  xmlns="urn:nhibernate-mapping-2.2" assembly="DataModel" namespace="DataModel.Entidades" 
+					default-lazy="false">
+
+	<class name="Categoria" table="PRECAT">
+		<id name="Id" column ="PRECATNRO" type="int" unsaved-value="0">
+			<generator class="identity"/>
+		</id>
+		<property name="Name" column="PRECATNOM" type="string" not-null="true"/>
+		<property name="Description" column="PRECATDES" type="string" not-null="false"/>
+		<property name="Orden" column="PRECATORD" type="string" not-null="false"/>
+		<property name="Tipo" column="PRECATTIP" type="string" not-null="false"/>
+		<many-to-one name="Parent" column="PRECATPAD"/>
+		<bag name="Children" generic="true" cascade="all">
+			<key column="PRECATPAD"/>
+			<one-to-many class="Categoria"/>
+		</bag>
+		
+	</class>
+	
+</hibernate-mapping>

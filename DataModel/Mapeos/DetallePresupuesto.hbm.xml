@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping  xmlns="urn:nhibernate-mapping-2.2" assembly="DataModel" namespace="DataModel.Entidades" 
+					default-lazy="false">
+
+	<class name="DetallePresupuesto" table="PREPRD">
+    <composite-id name="Clave" class="ClaveCompuestaDetallePresupuesto" >
+      <key-property name="IdPresupuesto" type="int" column="PREPRDPID" />
+      <key-property name="IdCategoria" type="int" column="PREPRDCAT" />
+      <key-property name="IdPeriodo" type="int" column="PREPRDPER" />
+    </composite-id>
+    <property name="Valor" column="PREPRDVAL" type="double" not-null="true"/>
+		<property name="Descripcion" column="PREPRDDES" type="string" not-null="false"/>
+    <many-to-one name="pCategoria" column="PREPRDCAT" class="Categoria" insert="false" not-null="true"/>
+    <many-to-one name="pPeriodo" column="PREPRDPER" class="Periodo"  insert="false" not-null="true"/>
+    <many-to-one name="pPresupuesto" column="PREPRDPID" class="Presupuesto" insert="false" not-null="true"/>
+  </class>
+	
+</hibernate-mapping>

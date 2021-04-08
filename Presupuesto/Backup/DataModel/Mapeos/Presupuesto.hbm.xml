@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping  xmlns="urn:nhibernate-mapping-2.2" assembly="DataModel" namespace="DataModel.Entidades" 
+					default-lazy="false">
+
+	<class name="Presupuesto" table="PREPRE">
+		<id name="Id" column ="PREPREID" type="int" unsaved-value="0">
+			<generator class="identity"/>
+		</id>
+		<property name="Name" column="PREPRENOM" type="string" not-null="false"/>
+		<property name="Description" column="PREPREDES" type="string" not-null="false"/>
+		<property name="Orden" column="PREPREORD" type="string" not-null="false"/>
+		<property name="Fecha" column="PREPREFEC" type="date" not-null="false"/>
+    <bag name="Detalles" generic="true" cascade="all">
+      <key column="PREPRDPID"/>
+      <one-to-many class="DetallePresupuesto"/>
+    </bag>
+	</class>
+	
+</hibernate-mapping>

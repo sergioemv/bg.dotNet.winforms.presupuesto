@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping  xmlns="urn:nhibernate-mapping-2.2" assembly="DataModel" namespace="DataModel.Entidades" >
+
+	<class name="Transaccion" table="PREGAS">
+		<id name="Id" column ="PREGASGID" type="int" unsaved-value="0">
+			<generator class="identity"/>
+		</id>
+		<property name="NroFactura" column="PREGASFAC" type="string" not-null="false"/>
+		<property name="Memo" column="PREGASMEM" type="string" not-null="false"/>
+		<property name="Fecha" column="PREGASFEC" type="date" not-null="false"/>
+    <many-to-one name="pProveedor" column="PREGASPRO"/>
+    <bag name="Detalles" generic="true" cascade="all">
+      <key column="PREGADGID"/>
+      <one-to-many class="DetalleTransaccion"/>
+    </bag>
+	</class>
+	
+</hibernate-mapping>

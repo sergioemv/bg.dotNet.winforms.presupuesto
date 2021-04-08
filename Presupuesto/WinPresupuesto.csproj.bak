@@ -1,0 +1,186 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7846AFA6-5CAD-4685-9B2D-88E2595555D9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WinPresupuesto</RootNamespace>
+    <AssemblyName>WinPresupuesto</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data3, Version=3.2.4.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils3, Version=3.2.4.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" />
+    <Reference Include="DevExpress.XtraBars3, Version=3.7.4.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors3, Version=3.2.4.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" />
+    <Reference Include="DevExpress.XtraGrid3, Version=3.2.4.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar3, Version=2.7.4.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList3, Version=1.11.4.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" />
+    <Reference Include="DundasWinChart, Version=5.5.0.1696, Culture=neutral, PublicKeyToken=a4c03dce5db22406, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="actions\Actions.cs" />
+    <Compile Include="actions\categorias\AdicionarAlLadoCategoriaAction.cs" />
+    <Compile Include="actions\categorias\AdicionarHijoCategoriaAction.cs" />
+    <Compile Include="actions\categorias\EliminarCategoriaAction.cs" />
+    <Compile Include="actions\categorias\EditarCategoriaAction.cs" />
+    <Compile Include="actions\DefaultAction.cs" />
+    <Compile Include="actions\categorias\dialogs\FCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="actions\categorias\dialogs\FCategoria.Designer.cs">
+      <DependentUpon>FCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="actions\IAction.cs" />
+    <Compile Include="actions\categorias\GestionarCategoriasAction.cs" />
+    <Compile Include="actions\categorias\dialogs\FCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="actions\categorias\dialogs\FCategorias.Designer.cs">
+      <DependentUpon>FCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="actions\presupuesto\AdicionarPresupuestosAction.cs" />
+    <Compile Include="actions\presupuesto\GestionarPresupuestosAction.cs" />
+    <Compile Include="actions\util\IdSet.cs" />
+    <Compile Include="FMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMain.Designer.cs">
+      <DependentUpon>FMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="actions\categorias\dialogs\FCategoria.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="actions\categorias\dialogs\FCategorias.resx">
+      <DependentUpon>FCategorias.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondodetalle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ControlesPresupuesto\ControlesPresupuesto.csproj">
+      <Project>{CC6A10E6-6C25-4BC7-BA1A-A630370E1E21}</Project>
+      <Name>ControlesPresupuesto</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataModel\DataModel.csproj">
+      <Project>{D592DDF7-BFCE-43C0-A285-C43FCC66F0E9}</Project>
+      <Name>DataModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="actions\ModeloActions.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\properties24_h.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancela.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tick.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoBanco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calender.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\treenode_add.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Currency.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

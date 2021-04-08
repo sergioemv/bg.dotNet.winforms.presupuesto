@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Eras Medium ITC" Size="9" />
+  <Class Name="DataModel.Entidades.Categoria" Collapsed="true">
+    <Position X="6.75" Y="1.5" Width="2.75" />
+    <TypeIdentifier>
+      <FileName>Entidades\Categoria.cs</FileName>
+      <HashCode>ABACBAAAAAAgAAREIgAEQAQAgAAEBYEAAACAAAAQAgQ=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Parent" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Children" />
+    </ShowAsCollectionAssociation>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="Parent" Type="DataModel.Entidades.Categoria" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.75" Y="1.5" />
+        <Point X="8.75" Y="1.125" />
+        <Point X="9.875" Y="1.125" />
+        <Point X="9.875" Y="1.68" />
+        <Point X="9.5" Y="1.68" />
+      </Path>
+    </AssociationLine>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DataModel.Entidades.Presupuesto" Collapsed="true">
+    <Position X="1.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Entidades\Presupuesto.cs</FileName>
+      <HashCode>ABACAAAAQQAgAAUEIAAAACUAAAAFEIAAAIAAAAAQAgA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Detalles" />
+    </ShowAsCollectionAssociation>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="Detalles" Type="DataModel.Entidades.DetallePresupuesto" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.75" Y="1.688" />
+        <Point X="3.25" Y="1.688" />
+        <Point X="3.25" Y="2.75" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.336" Y="0.141" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DataModel.Entidades.DetallePresupuesto" Collapsed="true">
+    <Position X="2.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Entidades\DetallePresupuesto.cs</FileName>
+      <HashCode>BAAAAACAAAAAAAQEEAEAIAAFAAAABIAQAAAQAAAEEEA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="pPresupuesto" />
+      <Property Name="pCategoria" />
+      <Property Name="pPeriodo" />
+    </ShowAsAssociation>
+    <AssociationLine Name="pPresupuesto" Type="DataModel.Entidades.Presupuesto" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.75" Y="3.188" />
+        <Point X="0.875" Y="3.188" />
+        <Point X="0.875" Y="1.375" />
+        <Point X="1.25" Y="1.375" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.214" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="pCategoria" Type="DataModel.Entidades.Categoria" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.25" Y="3.125" />
+        <Point X="6.938" Y="3.125" />
+        <Point X="6.938" Y="2.147" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="pPeriodo" Type="DataModel.Entidades.Periodo" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.75" Y="3.397" />
+        <Point X="1.25" Y="3.397" />
+        <Point X="1.25" Y="4" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.028" Y="0.915" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DataModel.Entidades.Proveedor" Collapsed="true">
+    <Position X="5.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Entidades\Proveedor.cs</FileName>
+      <HashCode>AAACAAAAAAAAAASAgAAAgAAAAAAAAIAAAAAAAAAAAgA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DataModel.Entidades.Periodo" Collapsed="true">
+    <Position X="0.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Entidades\Periodo.cs</FileName>
+      <HashCode>ABACBAAAAAAAAASAgAEAgAABAAAAAIAAAAAAAAAQAgQ=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DataModel.Entidades.Transaccion" Collapsed="true">
+    <Position X="7.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Entidades\Transaccion.cs</FileName>
+      <HashCode>AAAKAIAAAQAAAAUAgAAAAIEAACIBAYACAAAAAAAAAkA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="pProveedor" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Detalles" />
+    </ShowAsCollectionAssociation>
+    <AssociationLine Name="Detalles" Type="DataModel.Entidades.DetalleTransaccion">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.858" Y="0.631" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DataModel.Entidades.DetalleTransaccion" Collapsed="true">
+    <Position X="7.5" Y="3" Width="2" />
+    <TypeIdentifier>
+      <FileName>Entidades\DetalleTransaccion.cs</FileName>
+      <HashCode>AAACAAAAAAAAAAQEggAABQIAAAMAAIgCAAAIAAAAAgA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CategoriaAsignada" />
+      <Property Name="TransaccionPadre" />
+    </ShowAsAssociation>
+    <AssociationLine Name="TransaccionPadre" Type="DataModel.Entidades.Transaccion">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.168" Y="1.143" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+</ClassDiagram>

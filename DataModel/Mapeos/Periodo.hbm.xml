@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping  xmlns="urn:nhibernate-mapping-2.2" assembly="DataModel" namespace="DataModel.Entidades" 
+					>
+
+	<class name="Periodo" table="PREPER">
+		<id name="Id" column ="PREPERPID" type="int" unsaved-value="0">
+			<generator class="identity"/>
+			  </id>
+    <property name="Nombre" column="PREPERNOM" type="string" not-null="true"/>
+    <property name="Descripcion" column="PREPERDES" type="string" not-null="false"/>
+    <property name="Tipo" column="PREPERTIP" type="string" not-null="true"/>
+    <property name="Orden" column="PREPERORD" type="int" not-null="true"/>
+	</class>
+	
+</hibernate-mapping>
